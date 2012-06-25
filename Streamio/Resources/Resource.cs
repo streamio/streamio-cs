@@ -49,7 +49,19 @@ namespace Streamio.Resources
 			RestRequest request = new RestRequest(resource, Method.POST);
 			AddCreatableParameters(request, parameters);
 			AddAccessableParameters(request, parameters);
-			return api.Execute<T>(request).Data;
+			IRestResponse<T> response = api.Execute<T>(request);
+
+			int code = (int) response.StatusCode;
+			if(code == 422)
+			{
+				throw new StreamioValidationException(response);
+			}
+			else if(code != 201)
+			{
+				throw new StreamioException(response);
+			}
+
+			return response.Data;
 		}
 
 		public void Update(string id, Dictionary<string, object> parameters)
