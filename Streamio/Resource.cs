@@ -25,7 +25,7 @@ namespace Streamio
 		public List<T> List<T>(Dictionary<string, object> parameters) where T : new()
 		{
 			RestRequest request = new RestRequest(resource);
-			foreach(KeyValuePair<string,object> parameter in parameters)
+			foreach(KeyValuePair<string, object> parameter in parameters)
 			{
 				request.AddParameter(parameter.Key, parameter.Value);
 			}
