@@ -14,6 +14,7 @@ namespace Streamio
 		public readonly PlayerResource Players;
 		public readonly AudioResource Audios;
 		public readonly EncodingProfileResource EncodingProfiles;
+		public readonly PublicUploadResource PublicUploads;
 
 		public StreamioAPI(string username, string password)
 		{
@@ -25,6 +26,7 @@ namespace Streamio
 			Playlists = new PlaylistResource(client);
 			Players = new PlayerResource(client);
 			EncodingProfiles = new EncodingProfileResource(client);
+			PublicUploads = new PublicUploadResource(client);
 		}
 	}
 }
