@@ -8,6 +8,7 @@ namespace Streamio
 		const string BaseUrl = "https://streamio.com/api/v1";
 
 		public readonly VideoResource Videos;
+		public readonly ImageResource Images;
 
 		public StreamioAPI(string username, string password)
 		{
@@ -15,6 +16,7 @@ namespace Streamio
 			client.Authenticator = new HttpBasicAuthenticator(username, password);
 
 			Videos = new VideoResource(client);
+			Images = new ImageResource(client);
 		}
 	}
 }

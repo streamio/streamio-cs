@@ -15,6 +15,8 @@ namespace Streamio
 		public Resource(RestClient api)
 		{
 			this.api = api;
+			creatableAttributes = new string[0];
+			accessableAttributes = new string[0];
 		}
 
 		public T Find<T>(string id) where T : new()
