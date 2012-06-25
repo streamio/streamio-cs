@@ -11,6 +11,7 @@ namespace Streamio
 		public readonly VideoResource Videos;
 		public readonly ImageResource Images;
 		public readonly PlaylistResource Playlists;
+		public readonly PlayerResource Players;
 
 		public StreamioAPI(string username, string password)
 		{
@@ -20,6 +21,7 @@ namespace Streamio
 			Videos = new VideoResource(client);
 			Images = new ImageResource(client);
 			Playlists = new PlaylistResource(client);
+			Players = new PlayerResource(client);
 		}
 	}
 }
