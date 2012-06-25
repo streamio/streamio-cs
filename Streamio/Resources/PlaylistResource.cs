@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 
-namespace Streamio
+namespace Streamio.Resources
 {
 	public class PlaylistResource : Resource
 	{
