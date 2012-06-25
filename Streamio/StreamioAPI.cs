@@ -13,6 +13,7 @@ namespace Streamio
 		public readonly PlaylistResource Playlists;
 		public readonly PlayerResource Players;
 		public readonly AudioResource Audios;
+		public readonly EncodingProfileResource EncodingProfiles;
 
 		public StreamioAPI(string username, string password)
 		{
@@ -23,7 +24,7 @@ namespace Streamio
 			Images = new ImageResource(client);
 			Playlists = new PlaylistResource(client);
 			Players = new PlayerResource(client);
-			Audios = new AudioResource(client);
+			EncodingProfiles = new EncodingProfileResource(client);
 		}
 	}
 }
