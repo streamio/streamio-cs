@@ -11,7 +11,7 @@ TODO!
 Usage
 -----
 
-Use it.
+Include it.
 
 ``` c#
 using Streamio;
