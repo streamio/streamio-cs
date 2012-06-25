@@ -32,6 +32,16 @@ namespace Streamio
 			return api.Execute<List<T>>(request).Data;
 		}
 
+		public uint Count(Dictionary<string, object> parameters)
+		{
+			RestRequest request = new RestRequest(resource + "/count");
+			foreach(KeyValuePair<string, object> parameter in parameters)
+			{
+				request.AddParameter(parameter.Key, parameter.Value);
+			}
+			return api.Execute<Count>(request).Data.count;
+		}
+
 		public T Create<T>(Dictionary<string, object> parameters) where T : new()
 		{
 			RestRequest request = new RestRequest(resource, Method.POST);

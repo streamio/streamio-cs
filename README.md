@@ -48,6 +48,13 @@ Video video = api.Videos.Create(new Dictionary<string, object>() {
 	{"tags", "Awesome, Tags"},
 	{"file", "/path/to/awesome.mov"}
 });
+
+// Count videos with or without parameters
+api.Videos.Count() // 23
+api.Videos.Count(new Dictionary<string, object>() {
+	{"tags", "Awesome"}
+}) // 6
+
 ```
 
 Same principles work for the other available models (Image, EncodingProfile, Player, Playlist and Upload).
