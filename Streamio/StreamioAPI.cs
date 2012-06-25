@@ -25,6 +25,7 @@ namespace Streamio
 			Images = new ImageResource(client);
 			Playlists = new PlaylistResource(client);
 			Players = new PlayerResource(client);
+			Audios = new AudioResource(client);
 			EncodingProfiles = new EncodingProfileResource(client);
 			PublicUploads = new PublicUploadResource(client);
 		}
