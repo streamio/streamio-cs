@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class VideoResource : Resource
 	{
-		public VideoResource(RestClient api) : base(api)
+		public VideoResource(IRestClient client) : base(client)
 		{
 			resource = "videos";
 			creatableAttributes = new string[] {"encoding_profile_ids", "encoding_profile_tags", "skip_default_encoding_profiles", "use_original_as_transcoding"};

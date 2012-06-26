@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class PublicUploadResource : Resource
 	{
-		public PublicUploadResource(RestClient api) : base(api)
+		public PublicUploadResource(IRestClient api) : base(api)
 		{
 			resource = "uploads";
 			accessableAttributes = new string[] {"title", "tags"};

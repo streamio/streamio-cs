@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class EncodingProfileResource : Resource
 	{
-		public EncodingProfileResource(RestClient api) : base(api)
+		public EncodingProfileResource(IRestClient client) : base(client)
 		{
 			resource = "encoding_profiles";
 			accessableAttributes = new string[] {"title", "tags", "width", "desired_video_bitrate", "frame_rate", "audio_bitrate", "audio_sample_rate", "audio_channels"};

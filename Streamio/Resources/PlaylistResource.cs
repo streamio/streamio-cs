@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class PlaylistResource : Resource
 	{
-		public PlaylistResource(RestClient api) : base(api)
+		public PlaylistResource(IRestClient client) : base(client)
 		{
 			resource = "playlists";
 			accessableAttributes = new string[] {"title", "tags", "order_by", "order_direction"};

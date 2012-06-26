@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class ImageResource : Resource
 	{
-		public ImageResource(RestClient api) : base(api)
+		public ImageResource(IRestClient client) : base(client)
 		{
 			resource = "images";
 			accessableAttributes = new string[] {"title", "tags"};

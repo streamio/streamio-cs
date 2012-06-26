@@ -6,7 +6,7 @@ namespace Streamio.Resources
 {
 	public class AudioResource : Resource
 	{
-		public AudioResource(RestClient api) : base(api)
+		public AudioResource(IRestClient client) : base(client)
 		{
 			resource = "audios";
 			accessableAttributes = new string[] {"title", "description", "tags"};
