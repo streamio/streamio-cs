@@ -84,7 +84,7 @@ catch(StreamioException e)
 }
 ```
 
-Same principles work for the other available models (Image, EncodingProfile, Player, Playlist and Upload).
+Same principles work for the other available models (Image, Playlist, Player, Audio, EncodingProfile and PublicUpload).
 
 More Documentation
 ------------------
