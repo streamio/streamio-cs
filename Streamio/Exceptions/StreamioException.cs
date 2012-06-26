@@ -12,7 +12,7 @@ namespace Streamio
 		public StreamioException(IRestResponse response)
 		{
 			Response = response;
-			message = "Unexpected response status " + response.StatusCode.ToString() + " with body " + response.Content;
+			message = "Unexpected response status " + ((int) response.StatusCode).ToString() + " with body:\n" + response.Content;
 		}
 
 		public override string Message
