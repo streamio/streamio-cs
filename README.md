@@ -57,6 +57,33 @@ api.Videos.Count(new Dictionary<string, object>() {
 
 ```
 
+Handle errors.
+
+``` c#
+// Creating or updating with invalid parameters throws StreamioValidationException
+try
+{
+	api.Playlists.Create(new Dictionary<string, object>() {});
+}
+catch(StreamioValidationException e)
+{
+	// Do something with the e.Errors dictionary
+}
+
+// All other errors such as 401 unauthenticated, 404 not found, 400 bad request etc
+// throws StreamioException which includes server response in message output
+StreamioAPI api = new StreamioAPI("faulty-username", "faulty-password");
+try
+{
+	api.Videos.List();
+}
+catch(StreamioException e)
+{
+	// e.Message should explain what went wrong
+	// conditional error handling could be done on e.Response.StatusCode
+}
+```
+
 Same principles work for the other available models (Image, EncodingProfile, Player, Playlist and Upload).
 
 More Documentation
