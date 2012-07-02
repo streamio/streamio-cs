@@ -6,8 +6,20 @@ Official C# wrapper for the http://streamio.com API. Integrating video in your a
 Installation
 ------------
 
-TODO!
-    
+### Via NuGet
+
+You can install the Streamio library using the NuGet extension for Visual Studio (http://nuget.org).
+
+From the Package Manager Console run `Install-Package Streamio`.
+
+Or search for and install the Streamio package using the Manage NuGet Packages dialog.
+
+### From Source
+
+Feel free to download the source from this repository and simply include it in your project.
+
+If you go about it that way you will also have to manually install the RestSharp library (https://github.com/restsharp/RestSharp).
+
 Usage
 -----
 
