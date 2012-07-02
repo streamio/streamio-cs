@@ -12,6 +12,9 @@ namespace Streamio.Resources
 			accessableAttributes = new string[] {"title", "tags", "width", "desired_video_bitrate", "frame_rate", "audio_bitrate", "audio_sample_rate", "audio_channels"};
 		}
 
+        public List<EncodingProfile> List()
+        { return base.List<EncodingProfile>(new Dictionary<string, object>()); }
+
 		public List<EncodingProfile> List(Dictionary<string, object> parameters)
 		{ return base.List<EncodingProfile>(parameters); }
 

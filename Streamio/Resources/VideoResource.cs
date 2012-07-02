@@ -13,6 +13,9 @@ namespace Streamio.Resources
 			accessableAttributes = new string[] {"title", "description", "tags", "image_id"};
 		}
 
+        public List<Video> List()
+        { return base.List<Video>(new Dictionary<string, object>()); }
+
 		public List<Video> List(Dictionary<string, object> parameters)
 		{ return base.List<Video>(parameters); }
 

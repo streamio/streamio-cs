@@ -12,6 +12,9 @@ namespace Streamio.Resources
 			accessableAttributes = new string[] {"title", "tags", "order_by", "order_direction"};
 		}
 
+        public List<Playlist> List()
+        { return base.List<Playlist>(new Dictionary<string, object>()); }
+
 		public List<Playlist> List(Dictionary<string, object> parameters)
 		{ return base.List<Playlist>(parameters); }
 

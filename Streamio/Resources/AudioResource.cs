@@ -11,6 +11,9 @@ namespace Streamio.Resources
 			resource = "audios";
 			accessableAttributes = new string[] {"title", "description", "tags"};
 		}
+        
+        public List<Audio> List()
+        { return base.List<Audio>(new Dictionary<string, object>()); }
 
 		public List<Audio> List(Dictionary<string, object> parameters)
 		{ return base.List<Audio>(parameters); }
