@@ -19,12 +19,12 @@ namespace Streamio.Resources
 			accessableAttributes = new string[0];
 		}
 
-		public T Find<T>(string id) where T : new()
+		protected T Find<T>(string id) where T : new()
 		{
 			return Execute<T>(new RestRequest(resource + "/" + id)).Data;
 		}
 
-		public List<T> List<T>(Dictionary<string, object> parameters) where T : new()
+        protected List<T> List<T>(Dictionary<string, object> parameters) where T : new()
 		{
 			RestRequest request = new RestRequest(resource);
 			foreach(KeyValuePair<string, object> parameter in parameters)
@@ -44,7 +44,7 @@ namespace Streamio.Resources
 			return Execute<Count>(request).Data.count;
 		}
 
-		public T Create<T>(Dictionary<string, object> parameters) where T : new()
+        protected T Create<T>(Dictionary<string, object> parameters) where T : new()
 		{
 			RestRequest request = new RestRequest(resource, Method.POST);
 			AddCreatableParameters(request, parameters);
