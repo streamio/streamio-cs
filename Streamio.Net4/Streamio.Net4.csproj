@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B29F1461-4C4A-4BB3-8B96-DB45AD11A991}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Streamio</RootNamespace>
+    <AssemblyName>Streamio</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Streamio\Audio.cs">
+      <Link>Audio.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\AudioTranscoding.cs">
+      <Link>AudioTranscoding.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Count.cs">
+      <Link>Count.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\EncodingProfile.cs">
+      <Link>EncodingProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Exceptions\StreamioException.cs">
+      <Link>Exceptions\StreamioException.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Exceptions\StreamioValidationException.cs">
+      <Link>Exceptions\StreamioValidationException.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Image.cs">
+      <Link>Image.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\ImageTranscoding.cs">
+      <Link>ImageTranscoding.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\OriginalFile.cs">
+      <Link>OriginalFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Player.cs">
+      <Link>Player.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Playlist.cs">
+      <Link>Playlist.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\PublicUpload.cs">
+      <Link>PublicUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\AudioResource.cs">
+      <Link>Resources\AudioResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\EncodingProfileResource.cs">
+      <Link>Resources\EncodingProfileResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\ImageResource.cs">
+      <Link>Resources\ImageResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\PlayerResource.cs">
+      <Link>Resources\PlayerResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\PlaylistResource.cs">
+      <Link>Resources\PlaylistResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\PublicUploadResource.cs">
+      <Link>Resources\PublicUploadResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\Resource.cs">
+      <Link>Resources\Resource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Resources\VideoResource.cs">
+      <Link>Resources\VideoResource.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\StreamioAPI.cs">
+      <Link>StreamioAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\Video.cs">
+      <Link>Video.cs</Link>
+    </Compile>
+    <Compile Include="..\Streamio\VideoTranscoding.cs">
+      <Link>VideoTranscoding.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.103.2\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

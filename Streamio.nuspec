@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Streamio</id>
+    <version>0.7.1.0</version>
+    <title>Streamio</title>
+    <authors>Streamio AB</authors>
+    <owners>Streamio AB</owners>
+    <licenseUrl>https://raw.github.com/streamio/streamio-cs/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/streamio/streamio-cs</projectUrl>
+    <iconUrl>https://github.com/streamio/streamio-cs/raw/master/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Official C# wrapper for the http://streamio.com API.</description>
+    <releaseNotes>Support .NET framework version 3.5 and 4.0.</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>streamio API REST</tags>
+	<dependencies>
+      <dependency id="RestSharp" version="103.2" />
+    </dependencies>
+  </metadata>
+</package>
